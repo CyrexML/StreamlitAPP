@@ -10,7 +10,7 @@ import joblib
 from tensorflow import keras
 from xgboost import XGBClassifier
 
-# Путь к данным
+
 data_path_raw = "data/hotel_booking.csv"
 data_path_cleaned = "data/hotel_booking1.csv"
 
