@@ -305,3 +305,4 @@ if section == "Predykcja":
         ## Uruchomienie aplikacji
         # 1.tf_env\Scripts\activate
         # 2.streamlit run StreamlitAPP.py
+        # 3.
