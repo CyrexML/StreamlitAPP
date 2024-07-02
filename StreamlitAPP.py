@@ -11,27 +11,27 @@ from tensorflow import keras
 from xgboost import XGBClassifier
 
 # Путь к данным
-data_path_raw = "D:/Projektiki/predykcja_rezerwacji/hotel_booking.csv"
-data_path_cleaned = "D:/Projektiki/predykcja_rezerwacji/hotel_booking1.csv"
+data_path_raw = "data/hotel_booking.csv"
+data_path_cleaned = "data/hotel_booking1.csv"
 
 # Загрузка данных
 df_raw = pd.read_csv(data_path_raw)
 df_cleaned = pd.read_csv(data_path_cleaned)
 
 # Загрузка обучающих и тестовых данных
-X_train = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/X_train.csv')
-X_test = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/X_test.csv')
-X_train_scaled = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/X_train_scaled.csv')
-X_test_scaled = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/X_test_scaled.csv')
-y_train = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/y_train.csv')['is_canceled']
-y_test = pd.read_csv('D:/Projektiki/predykcja_rezerwacji/y_test.csv')['is_canceled']
-scaler_path = 'D:/Projektiki/predykcja_rezerwacji/scaler.pkl'
+X_train = pd.read_csv('data/X_train.csv')
+X_test = pd.read_csv('data/X_test.csv')
+X_train_scaled = pd.read_csv('data/X_train_scaled.csv')
+X_test_scaled = pd.read_csv('data/X_test_scaled.csv')
+y_train = pd.read_csv('data/y_train.csv')['is_canceled']
+y_test = pd.read_csv('data/y_test.csv')['is_canceled']
+scaler_path = 'data/scaler.pkl'
 scaler = joblib.load(scaler_path)
 
 # Загрузка моделей
-lr_model_path = 'D:/Projektiki/predykcja_rezerwacji/logistic_regression_model.pkl'
-xgb_model_path = 'D:/Projektiki/predykcja_rezerwacji/best_model_xgb.pkl'
-nn_model_path = 'D:/Projektiki/predykcja_rezerwacji/tf_model.h5'
+lr_model_path = 'data/logistic_regression_model.pkl'
+xgb_model_path = 'data/best_model_xgb.pkl'
+nn_model_path = 'data/tf_model.h5'
 
 model_lr = joblib.load(lr_model_path)
 model_xgb = joblib.load(xgb_model_path)
